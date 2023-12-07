@@ -15,6 +15,9 @@ const winningCombos = [
 let board;
 let turn = 'X';
 let win;
+let gamesPlayed = 0;
+let xWins = 0;
+let oWins = 0;
 
 /*----- cached element references -----*/
 
@@ -52,6 +55,8 @@ function init() {
     '', '', '',
     '', '', ''
     ];
+    win = null;
+    gamesPlayed++;
     render();
 };
 
@@ -60,7 +65,15 @@ function render() {
     //this moves the value of the board item into the squares[idx]
     squares[index].textContent = mark;
     });
-    messages.textContent = win === 'T' ? `That's a tie, queen!` : win ? `${win} wins the game!` : `It's ${turn}'s turn!`;
+    if (win === 'X') {
+        xWins++;
+    } else if (win === 'O') {
+        oWins++;
+    }
+
+    messages.textContent = win === 'T' ? `Matche null!` : win ? `${win} a gagner!` : `C'est le tour de ${turn}`;
+
+    document.getElementById('game-stats').textContent = `Parties jouées: ${gamesPlayed} | X: ${xWins} | O: ${oWins}`;
     };
 
 init();

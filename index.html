@@ -9,11 +9,12 @@
     <!-- And this is how we link up the JS! -->
     <script defer src="js/main.js"></script>
     <!-- A fun title -->
-    <title>Empowering Tic Tac Toe for the Good of Humanity</title>
+    <title>Tic-Tac-Toe au service de l'humanité</title>
 </head>
 <body>
     <h1>Tic-Tac-Toe</h1>
-    <h2>It's X's turn!</h2>
+    <div id="game-stats">Parties jouées: 0 | X: 0 | O: 0</div>
+    <h2>C'est le tour de X !</h2>
     <!-- Many websites are just divs on divs on divs. -->
     <div class="flex-container flex-column">
         <div class="flex-container flex-wrap" id="board">
@@ -28,7 +29,31 @@
         <div class="square"></div>
         </div>
         <!-- I added a little reset button because our users are going to want to play round after round of our glorious game without ever refreshing the browser! -->
-        <button id="reset-button">reset</button>
+        <button id="reset-button">une autre partie</button>
     </div>
+
+
+    <footer>
+        <div class="info">
+            <div>
+                
+                <p>Inspiration du projet :</p>
+                
+                <a href="https://github.com/annaelizabeth2019/tictactoetwo"> https://github.com/annaelizabeth2019/tictactoetwo </a>
+            </div>
+            
+            <div class="nom">
+                <p>Loic Allard</p>
+               
+                <p>Design Web A2023</p>
+            </div>
+           
+            <div>
+                <a href="mailto:allardloic@icloud.com">
+                    <img src="Screenshot 2023-12-06 133404.png" alt="Loic Allard" style="border-radius: 50%; width: 80px; height: 80px; margin-top: 5px;">
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
